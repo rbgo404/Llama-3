@@ -1,5 +1,4 @@
 from vllm import LLM, SamplingParams
-from pathlib import Path
 from transformers import AutoTokenizer
 
 class InferlessPythonModel:
@@ -23,4 +22,4 @@ class InferlessPythonModel:
         return {'generated_text': result_output[0]}
 
     def finalize(self):
-        pass
+        self.llm = None
